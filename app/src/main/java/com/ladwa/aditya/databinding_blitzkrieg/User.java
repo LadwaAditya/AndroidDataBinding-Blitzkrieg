@@ -7,9 +7,9 @@ package com.ladwa.aditya.databinding_blitzkrieg;
 public class User {
     private final String firstName;
     private final String lastName;
-    private final String age;
+    private final int age;
 
-    public User(String firstName, String lastName, String age) {
+    public User(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -23,7 +23,7 @@ public class User {
         return lastName;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 }
