@@ -1,6 +1,7 @@
 package com.ladwa.aditya.databinding_blitzkrieg;
 
 import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 
 /**
  * Created by Aditya on 07-Jan-17.
@@ -31,13 +32,13 @@ public class User extends BaseObservable {
         return age;
     }
 
-    public boolean isClicked() {
+    @Bindable public boolean isClicked() {
         return clicked;
     }
 
     public void setClicked(boolean clicked) {
         this.clicked = !clicked;
-//        notifyPropertyChanged(BR.clicked);
+        notifyPropertyChanged(BR.clicked);
     }
 
     @Override public String toString() {
