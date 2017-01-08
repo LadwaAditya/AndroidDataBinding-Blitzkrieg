@@ -1,7 +1,6 @@
 package com.ladwa.aditya.databinding_blitzkrieg;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -22,5 +21,6 @@ public class Presenter {
 
     public void onClickReference(User user) {
         Toast.makeText(this.context, "Clicked Listener method " + user.getFirstName() + user.getLastName(), Toast.LENGTH_SHORT).show();
+        user.setClicked(user.isClicked());
     }
 }

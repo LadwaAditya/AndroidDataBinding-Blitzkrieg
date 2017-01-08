@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        User user = new User("Aditya", "Ladwa", 22);
+        User user = new User("Aditya", "Ladwa", 22, false);
         binding.setUser(user);
         //Set presenter binding
         binding.setPresenter(new Presenter(this));

@@ -3,6 +3,8 @@
 
     <data>
 
+        <import type="android.view.View"/>
+
         <variable
             name="user"
             type="com.ladwa.aditya.databinding_blitzkrieg.User"/>
@@ -21,7 +23,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.firstName}"/>
+            android:text="@{user.firstName}"
+            android:visibility="@{user.clicked ? View.INVISIBLE : View.VISIBLE}"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,6 +47,7 @@
             android:layout_height="wrap_content"
             android:onClick="@{()->presenter.onClickReference(user)}"
             android:text="Listener Binding"/>
+
 
     </LinearLayout>
 </layout>
