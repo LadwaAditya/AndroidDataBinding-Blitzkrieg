@@ -21,7 +21,6 @@ public class Presenter {
     }
 
     public void onClickReference(User user) {
-        Log.d("Onclick", "Clicked");
         Toast.makeText(this.context, "Clicked Listener method " + user.getFirstName() + user.getLastName(), Toast.LENGTH_SHORT).show();
     }
 }
