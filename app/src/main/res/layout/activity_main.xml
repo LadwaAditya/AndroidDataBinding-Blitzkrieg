@@ -6,6 +6,10 @@
         <variable
             name="user"
             type="com.ladwa.aditya.databinding_blitzkrieg.User"/>
+
+        <variable
+            name="presenter"
+            type="com.ladwa.aditya.databinding_blitzkrieg.Presenter"/>
     </data>
 
     <LinearLayout
@@ -32,11 +36,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{presenter::onClickMethod}"
             android:text="Method Reference"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{()->presenter.onClickReference(user)}"
             android:text="Listener Binding"/>
 
     </LinearLayout>
